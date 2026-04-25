@@ -407,23 +407,37 @@
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('entryModal')">&times;</span>
             <h2 class="text-2xl font-bold mb-4 pixel-font border-b border-blue-600 pb-2 italic">ラ＝ウクカ大陸 入国申請</h2>
-            <form id="entryForm" onsubmit="handleForm(event, '入国申請を受理しました。和陣当府の審査をお待ちください。')">
-                <label>申請者名</label>
-                <input type="text" required placeholder="Name / ID">
+            <form id="entryForm" onsubmit="submitEntryForm(event)">
+                <label>申請者名 (Name / ID)</label>
+                <input type="text" name="name" required placeholder="例：ラ＝ウクカの旅人">
 
-                <label>入国目的</label>
-                <textarea rows="3" required placeholder="和温の理を学ぶため、等"></textarea>
+                <label>出身地 (Origin)</label>
+                <input type="text" name="origin" required placeholder="ラ＝ウクカ大陸内、あるいは異世界の地名">
 
-                <label>持ち込み希望の杖（種類）</label>
-                <input type="text" placeholder="例：樫の木の杖">
+                <label>属性/専門分野 (Attribute)</label>
+                <select name="attribute" required>
+                    <option value="">選択してください</option>
+                    <option value="陣法">陣法 (Formation)</option>
+                    <option value="工芸">工芸 (Craft)</option>
+                    <option value="記録">記録 (Record)</option>
+                    <option value="調律">調律 (Tuning)</option>
+                    <option value="その他">その他 (Other)</option>
+                </select>
 
-                <div class="flex items-center gap-4 mt-6">
-                    <input type="checkbox" required class="w-5 h-5 mt-0">
-                    <span class="text-xs text-gray-400">「和温の陣」における秩序を遵守することを誓います。</span>
+                <label>入国目的 (Purpose)</label>
+                <textarea name="purpose" rows="3" required placeholder="和温の理を学ぶため、等"></textarea>
+
+                <div class="flex items-start gap-4 mt-6">
+                    <input type="checkbox" name="verification" required class="w-5 h-5 mt-1 cursor-pointer">
+                    <span class="text-xs text-gray-400 leading-relaxed">
+                        私は和温陣国の法を遵守し、「和温の陣」における秩序を乱さないことをここに誓約いたします。
+                    </span>
                 </div>
 
-                <button type="submit"
-                    class="w-full bg-blue-600 text-white py-4 mt-8 font-bold hover:bg-blue-700 transition pixel-font">入国申請を提出</button>
+                <button type="submit" id="entrySubmitBtn"
+                    class="w-full bg-blue-600 text-white py-4 mt-8 font-bold hover:bg-blue-700 transition pixel-font flex justify-center items-center gap-2">
+                    <span>入国申請を提出</span>
+                </button>
             </form>
         </div>
     </div>
@@ -472,8 +486,57 @@
             event.preventDefault();
             const modalId = event.target.closest('.modal').id;
             closeModal(modalId);
+            showCustomMsg(message);
+        }
 
-            // 完了メッセージ表示
+        // 入国申請フォームの送信 (GAS連携)
+        const GAS_URL = 'https://script.google.com/macros/s/AKfycbylpuD6E9kPoLazn-iKOXYIF9EHJqfHPfp3w6KLGpub1-nj0QL5TJzyRWN5Ea0_zMCh2Q/exec';
+
+        async function submitEntryForm(event) {
+            event.preventDefault();
+            const form = event.target;
+            const btn = document.getElementById('entrySubmitBtn');
+            const originalBtnText = btn.innerHTML;
+
+            // 読み込み状態
+            btn.disabled = true;
+            btn.innerHTML = '<span class="animate-spin inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full"></span> 申請中...';
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                // GASへの送信
+                // GAS側が正しくCORS設定されていない場合やリダイレクトを処理するために
+                // 実際にはもう少し複雑な処理が必要な場合がありますが、標準的なPOSTを試みます
+                if (GAS_URL === 'YOUR_GAS_WEBAPP_URL_HERE') {
+                    // URLが設定されていない場合はモック動作
+                    await new Promise(resolve => setTimeout(resolve, 1500));
+                    console.log('Mock submission data:', data);
+                } else {
+                    await fetch(GAS_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+                }
+
+                closeModal('entryModal');
+                showCustomMsg('入国申請を受理しました。和陣当府の審査をお待ちください。');
+                form.reset();
+            } catch (error) {
+                console.error('Submission error:', error);
+                alert('申請中にエラーが発生しました。設定を確認してください。');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalBtnText;
+            }
+        }
+
+        function showCustomMsg(message) {
             document.getElementById('msgText').innerText = message;
             document.getElementById('msgBox').classList.remove('hidden');
         }
