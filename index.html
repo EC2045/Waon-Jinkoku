@@ -215,9 +215,10 @@
                 </section>
                 <div class="text-center py-12 border-y border-white/5 bg-zinc-900/20">
                     <h3 class="text-2xl font-bold mb-6 pixel-font">歴史のアーカイブ</h3>
-                    <button onclick="downloadHistory()" class="bg-white text-black px-10 py-4 font-bold hover:bg-red-600 hover:text-white transition pixel-font inline-flex items-center gap-3">
+                    <!-- history.txt を直接ダウンロードするように変更 -->
+                    <a href="history.txt" download="history.txt" class="bg-white text-black px-10 py-4 font-bold hover:bg-red-600 hover:text-white transition pixel-font inline-flex items-center gap-3">
                         📖 歴史書を閲覧 (.txt)
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -371,16 +372,6 @@
             document.getElementById('msgIcon').innerText = "📊";
             showCustomMsg(`国勢調査への協力に感謝します。データは「安定」の維持に活用されます。`);
             event.target.reset();
-        }
-
-        function downloadHistory() {
-            const history = `和温陣国 歴史書\n\n和温陣国の杖の特徴は安定性...`;
-            const blob = new Blob([history], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url; a.download = '和温陣国_歴史書.txt';
-            document.body.appendChild(a); a.click();
-            document.body.removeChild(a);
         }
 
         function openModal(id) { 
