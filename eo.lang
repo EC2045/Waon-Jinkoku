@@ -1,0 +1,132 @@
+nav.title=Waon-Jinkoku
+nav.wzn=WZN-Dissendo
+nav.contact=Aŭdienca Ĉambro
+hero.title=Waon-Jinkoku
+hero.subtitle=Ŝtata Informa Administra Sistemo
+tab.overview=Superrigardo
+tab.culture=Kulturo & Historio
+tab.map=Nacia Mapo
+tab.database=Datumbazo
+
+overview.flag.title=Flago de Waon-Jin
+overview.flag.desc=Simbolo de cifereca, tradicio, kaj "stabileco".
+overview.entry.title=Enmigrada Sistemo
+overview.entry.desc=Vojaĝo al la kontinento La-Ukuka kaj akiro de civitaneco postulas oficialan "Enmigradan Revizion".
+overview.entry.btn1=Komenci Enmigradan Revizion
+overview.entry.btn2=Kunlabori kun la Censo
+overview.news.title=W-Novaĵoj Oficiala Retejo
+overview.news.tag=OFICIALA LIGILO
+overview.news.desc=Plej novaj situaciaj ĝisdatigoj de Waon Broadcasting Network (WZN). Ni rekomendas kontroli la nunan staton de la kontinento antaŭ eniro.
+
+culture.staff.title=Ekskluziva Unuo de Reĝo (Provizora): Bastono de Waon
+culture.staff.heading=Bastono de Waon
+culture.staff.desc=La "stabileco" en ĉi tiu lando estas konservata per deplojo de "formacioj" per bastonoj. Civitanoj posedas bastonojn bazitajn sur siaj roloj, iĝante iliaj dumvivaj kunuloj.
+culture.staff.note=* La ekskluziva unuo de la Reĝo estas sub speciala licenca administrado kiel kerna aparato reganta la "strukturan konservadon" de la tuta kontinento.
+culture.history.title=Historia Arkivo
+culture.history.btn=📖 Legi Historian Libron (.txt)
+
+map.title=Kompleta Mapo de Kontinento La-Ukuka
+
+footer.title=Waon-Jinkoku
+footer.wzn=WZN-Waon-Dissendo
+footer.copy=&copy; 2024 Wajin-Tofu Records. Ĉiuj Rajtoj Rezervitaj.
+
+modal.entry.title=Kontinenta Enmigrada Revizia Formularo
+modal.entry.name=Nomo de Kandidato
+modal.entry.purpose=Celo de Eniro
+modal.entry.type=Speco de Posedata Bastono
+modal.entry.type.op1=Ĝenerala Uzo (Norma)
+modal.entry.type.op2=Malstabila (De Teritorio de Demona Sinjoro)
+modal.entry.type.op3=Neniu
+modal.entry.travel=Vojaĝmaniero
+modal.entry.travel.op1=Maro (Planita Ŝipo)
+modal.entry.travel.op2=Formacio (Spaca Translokigo)
+modal.entry.check=Mi ĵuras obei la leĝojn de Waon-Jinkoku kaj ne ĝeni ĝian "stabilecon".
+modal.entry.submit=Afiŝi Aplikajn Datumojn
+
+modal.census.title=1-a Nacia Censo de Waon-Jinkoku
+modal.census.sub=Nacia Loĝantara Censo
+modal.census.loc=Nuna Loĝloko
+modal.census.loc.op0=Bonvolu elekti
+modal.census.loc.op1=Wajin-Tofu (Centra)
+modal.census.loc.op2=Limo de La-Ukuka (Bufrozono)
+modal.census.loc.op3=Lando de Malstabileco (Iama Teritorio)
+modal.census.loc.op4=Eksterlande / En Transiro
+modal.census.age=Aĝoklaso
+modal.census.age.op1=Sub 20
+modal.census.age.op2=20-aj ĝis 40-aj jaroj
+modal.census.age.op3=40-aj ĝis 60-aj jaroj
+modal.census.age.op4=Super 60
+modal.census.age.op5=Senmorta
+modal.census.stab=Nuna Grado de "Stabileco" (Memraportita)
+modal.census.stab.l=Malstabila
+modal.census.stab.m=Neŭtrala
+modal.census.stab.r=Plene Stabila
+modal.census.req=Petoj/Opinioj al la Registaro
+modal.census.submit=Oficiale Sendi Respondojn
+
+msg.btn=Konfirmi
+
+db.setting.title=Bazaj Agordoj de Waon-Jinkoku
+db.setting.lang_off=Oficiala Lingvo: Ŝel-up
+db.setting.capital=Ĉefurbo: Wajin-Tofu
+db.setting.continent=Kontinento: La-Ukuka
+db.setting.lang_use=🌐 Parolataj Lingvoj:<br>[Unikaj Lingvoj (Kongruaj)] Ŝel-up / Ŝeran-ibu / Ŝeran-yabu<br>[Ekzistantaj Lingvoj] Angla (Antikva, Moderna) / Japana (Ofte sen akĉento) / !anbyam *1
+
+db.food.title=Dieto
+db.food.desc=Dieto influita de la japana kulturo, kiel saŝimio, rizo, kaj kareo.<br>Eĉ ĉe nekonataj estaĵoj, ekzistas kulturo de **"Se ĝi estas manĝebla, faru ĝin saŝimio."**<br>Sekve, la demando ne estas "Ĉu ni povas manĝi ĉi tion?" sed **"Kio okazas se ni faras ĝin saŝimio?"**<br>Endemiaj specioj de Waon-Jinkoku ankaŭ kutime fariĝas saŝimio.
+
+db.culture.title=Kultura kaj Teknologia Nivelo
+db.culture.desc=Higiena administrado estas plene establita, kaj ekzistas tradiciaj kulturoj kiel uzi drakflugilojn kiel ŝtofon.<br>Ili ankaŭ posedas nekonatajn teknologiojn kiel bastonojn. Kvankam ĉi tiuj malfacilas klarigi per scienco (kvankam ne neeble), ili postulas specialan scion pri magia inĝenierado.
+
+db.danger.title=Nivelo de Danĝero: Malalta
+db.danger.desc="Sekura por homoj de diversaj kulturoj", "Bona higieno", kaj "Relative bona publika sekureco pro la Bastono de Waon".<br>El ĉi tiuj punktoj, la nivelo de danĝero estas konsiderata malalta.<br><br>Tamen, **"iuj areoj havas altan eblecon esti kaptitaj en spacaj distordoj,"** do estas pli bone resti en la ĉefurbo (kiu scias, kio okazas se vi eliras).
+
+db.qa.title=Q&A / Glosaro
+db.qa.q1=Q. Kio okazas se mi interagas kun T.S?
+db.qa.a1=A. Vi unue ne povas. T.S estas eble la "plej grava persono" en Waon-Jinkoku.
+db.qa.q2=Q. Kio se mi devigas interagadon?
+db.qa.a2=A. Vi mortas. Eĉ se vi postvivas, ekstrema puno kaj ekzekuto. "Vi fariĝos eksperimenta ilo por multoblaj anomaliaj organizaĵoj." "Estas miraklo se vi revenos en homoida formo."
+db.qa.q3=Q. Ĉu ekzistas maniero interagi kun T.S?
+db.qa.a3=A. Jes.<br>- Submetu permesilon al la registaro kaj faru intervjuon.<br>- Akiru antaŭan permeson de T.S rekte (inkluzive de pruvo).<br>- Estu savita kaj protektita de la Kontraŭanomalia Ĉefstabejo kiam vi estas kaptita en anomaliom (ene de la ĉefurbo).
+db.qa.q4=Q. Kio estas la rilato kun la sama artokreinto R?
+db.qa.a4=A. Ĝi ne estas bone komprenita. Estas certe ke ili postvivis post interagado.
+db.qa.q5=Q. Ĉu ekzistas maniero iri ekster la ĉefurbo?
+db.qa.a5=A. Kun permesilo, vi povas esplori libere. Tamen, vojaĝi ekster la ĉefurbo por turismo ne estas rekomendita. Se vi iras, prenu striktajn sekurecajn mezurojn kaj havu celon.
+db.qa.q6=Q. Kio okazas se mi iras ekster la ĉefurbo?
+db.qa.a6=A. La efikoj de spacaj distordoj estas nekonataj. Se vi havas bonŝancon, vi eble nur blokos en muro; se malbonŝancon, vi eble fariĝos muro mem aŭ iĝos likvaĵo. Prenu striktajn sekurecajn mezurojn.
+db.qa.q7=Q. Ĉu mi povas interagi kun homoj de onva?
+db.qa.a7=A. Vi povas paroli kun ili, sed demandi pri onva estas malpermesita.<br>Kialo: Ĉar onva estas hiperoptimumigita kontrolŝtato.
+
+db.glossary.title=Glosaro: Zaravasa
+db.glossary.desc=*1 Malofte, homoj vivantaj en onva, kiuj fariĝis zaravasa, enmigras ĉi tien.<br><br>**Zaravasa [Adj]**<br>Derivita de Ŝel-up. Stato de mensa kaj fizika elĉerpiĝo pro troa optimumigo. Ĉefe uzata de enmigrintoj de onva.
+
+db.chars.title=Registrita Personaro / Klasigita Datumo
+db.char1.name=Kai Renos
+db.char1.desc=Profesio: Diplomato / Lingvoj: Ŝel-up, Ŝeran-yabu, Japana / Raso: Homo
+db.char2.name=T.S (Provizora Nacieco)
+db.char2.desc=Profesio: Klasigita / Raso: Homoida Vivoformo / Aĝo: 3i<br>Esploras kaj plibonigas la bastonojn de Waon-Jinkoku. Ligita al murins Inc. kaj la Semiotika Laboratorio "Fikcia Demanda Ekspozicio".
+db.char3.name=Rigesu Albalusu
+db.char3.desc=Raso: Milita Lupo / Aĝo: 13<br>La longe perdita pli juna frato de Ritsu Albalusu. Havas la potencon interagi kun T.S. Ofte faras nekompreneblajn afiŝojn.
+db.char4.name=Leia Mist
+db.char4.desc=Profesio: Lingvisto & Bibliotekisto / Lingvoj: Ŝel-up, Antikva Ŝel-up, Japana / Raso: Homo / Aĝo: 23<br>Manaĝero de la Centra Biblioteko Waon-Jinkoku. Esploras antikvan literaturon Ŝel-up kaj perditajn magiajn tekstojn.
+db.char5.name=Noa Veris
+db.char5.desc=Profesio: Simbola Inĝeniero / Lingvoj: Ŝel-up, Ŝeran-yabu / Raso: Homo / Aĝo: 24<br>Apertenas al la Reĝa Simbola Inĝenieria Esplora Buroo. Dezajnas kaj disvolvas la "simbolajn cirkvitojn" enkonstruitajn en bastonojn.
+db.char6.name=El Safia
+db.char6.desc=Profesio: Magia Esploristo / Lingvoj: Ŝel-up, Japana / Raso: Homo / Aĝo: 42<br>Ĉefa esploristo ĉe la Akademio de Magia Scienco de Waon-Jinkoku. Specialiĝas pri la interago inter bastonoj kaj simbola energio.
+db.char7.name=Iris Fen
+db.char7.desc=Profesio: Internacia Analizisto / Lingvoj: Ŝel-up, Ŝeran-yabu, Japana, Angla / Raso: Homo / Aĝo: 19<br>Apertenas al la Oficejo pri Inteligenta Analizo de la Ministerio de Eksterlandaj Aferoj. Esploras eksterlandajn kulturojn kaj lingvojn por konsili diplomatojn.
+db.char8.name=R-09 "Aluka"
+db.char8.desc=Profesio: Esplora Subtena AI-Vivoformo / Lingvoj: Ŝel-up, Japana, Maŝina Lingvo / Raso: Homoida Vivoformo / Aĝo: NaN<br>Homoida subtena vivoformo disvastigita esti kun-disvolvita de T.S. Asistas en bastonaj eksperimentoj kaj simbolaj kalkuloj, sed plej multaj disvolvaj protokoloj estas klasigitaj.
+
+db.staffs.title=Specoj de Bastonoj
+db.staff1.title=Tectonics
+db.staff1.desc=La plej malnova kaj plej bonega bastono. Havas Y-forman subtenon, igante ĝin tre stabila kaj imuna al rompiĝo, permesante facilan magian manipuladon.
+db.staff2.title=Rekis-Klasa Bastono
+db.staff2.desc=Bastonoj, kiuj interferas kun la leĝoj de la mondo mem, aŭ posedas superfortan potencon.<br>Ekzemploj: Interrobang (‽), Matematiko, Nuklea/Viruso, Konfirmo (!), Necerteco (?)<br>Ĉar ĉi tiuj subtenas la mondon, ili estas sur alia nivelo. Tamen, ili nuntempe estas rompitaj.<br><br>**Kial ili rompiĝis?**<br>La mondo ne povas subteni Rekis-Klasajn bastonojn dum longaj periodoj. Pro ilia naturo, kontraŭdiroj kaj kolapsoj okazas, kaŭzante ilin memdetruiĝi kiam ili ne plu povas elteni.<br><br>**Kio restas?**<br>La bastonoj estas rompitaj, sed blukopioj, tradicioj, fragmentoj, kaj mitoj restas. Ĉiuj scias "ili ekzistis en la pasinteco."<br><br>La nuna Bastono de la Reĝo (Bastono de Waon) ne estas Rekis-Klasa. Ĝi estas bastono, kiu respektas "nacian unuecon." (Kredita esti influita de la japana kulturo)
+
+db.history.title=Historio de Waon-Jinkoku: De "‽" ĝis "Blanka Spaco"
+db.history.1=🌒 Tagiĝo kaj la Prezo de Agordado<br>En Orienta Epoko 850, Waon-Jinkoku estis fondita por kontroli "Simbolan" energion per "Bastonoj". Tamen, metiisto, kiu malesperis pro perfekta agordado, fariĝis Demona Sinjoro kun la bastonoj de "Nuklea kaj Viruso", kiuj detruas ĉion. La metiistoj de la tempo sigelis lin en la "Arbaro de Malakceptitaj Skizoj" uzante la bastonon de "?" (Bastono de Necerteco) por malklarigi faktojn, sed kaŭzaj distordoj restis en la mondo.
+db.history.2=📘 La Vojaĝo de Tanato kaj la Miraklo de "‽"<br>Tempo pasis, kaj knabo nomita Tanato kun nekompleta "skribaĉa"-simila bastono ekstaris. Li lernis la bazajn atributojn de la mondo kaj eksterlandajn teknologiojn, evoluigante sian bastonon en "Tectonics". Kiam la 4D minaco "Bastono de Dio" aperis, Tanato liberigis la tabuojn "Nuklea/Viruso" kaj "?" por venki ĝin. Responde al la posta monda kolapso, li kunfandis la "Bastonon de Konfirmo (!)" de la metiistoj kun "?", kreante la bastonon de "‽" (Interrobang) kie demando kaj certeco kunekzistas.<br>La Demona Sinjoro, vidante sian suferon agorditan kiel "necesa parto de la mondo" ene de la bastono de Tanato, fandiĝis en la punkton de "‽", iĝante la fundamento de la mondo.
+db.history.3=⚔️ Nova Gvidanto kaj la "Tribo Sen Bastonoj"<br>Kvin jarojn poste, Tanato mortis, kaj la juna viro Nakashita fariĝis la gvidanto. La paca lando estis skuita per renkonto kun ŝippereinta "Tribo, kiu ne uzas bastonojn." Defiita al duelo fare de ilia militema gvidanto, Nakashita manipulis la venton per verda bastono, forblovante la gigantan glavon per superforta diferenco en potenco.<br>Tamen, kio restis estis profunda demando. "Bastonoj estas tro pravaj. Tial ni kuraĝis elekti malstabilecon." Al ili ne mankis bastonoj pro nescio; ili elektis necertan estontecon kiel "alian respondon", kiun Waon-Jinkoku ne elektis.
+db.history.4=🌅 La Blanka Spaco en la Arkivo de Malakceptitaj Skizoj<br>Nakashita forigis ĉi tiun renkonton el oficialaj registroj, sekrete skribante ĝin en la "Arkivo de Malakceptitaj Skizoj" de la agordantoj.<br><br>Malakceptita Skizo N-ro !?-β "La Elekto Ne Havi Bastonon"<br>Stabileco ne estas justeco. Sed malstabileco ankaŭ ne estas malbono. La mondo ne povas antaŭeniri nur kun "konfirmitaj demandoj".<br><br>La agordado de "‽" enhavanta la varmon de la Demona Sinjoro, kaj la volo de tiuj sen bastonoj. Envolvita en ĉio ĉi, la vigla flago svingiĝas trankvile kaj denove en la ĉielo de Waon-Jinkoku hodiaŭ.

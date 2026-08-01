@@ -1,0 +1,132 @@
+nav.title=Waon-Jinkoku
+nav.wzn=WZN Broadcast
+nav.contact=Audience Chamber
+hero.title=Waon-Jinkoku
+hero.subtitle=State Information Management System
+tab.overview=Overview
+tab.culture=Culture & History
+tab.map=National Map
+tab.database=Database
+
+overview.flag.title=Flag of Waon-Jin
+overview.flag.desc=A symbol of digital, tradition, and "stability".
+overview.entry.title=Immigration System
+overview.entry.desc=Travel to the La-Ukuka continent and obtaining citizenship requires an official "Immigration Review".
+overview.entry.btn1=Start Immigration Review
+overview.entry.btn2=Cooperate with the Census
+overview.news.title=W-News Official Site
+overview.news.tag=OFFICIAL LINK
+overview.news.desc=Latest situation updates by Waon Broadcasting Network (WZN). We recommend checking the continent's current status before entry.
+
+culture.staff.title=King's (Temp) Exclusive Unit: Staff of Waon
+culture.staff.heading=Staff of Waon
+culture.staff.desc=The "stability" in this country is maintained through the deployment of "formations" via staffs. Citizens possess staffs based on their roles, becoming their lifelong companions.
+culture.staff.note=* The King's exclusive unit is under special license management as a core device governing the "structural maintenance" of the entire continent.
+culture.history.title=History Archive
+culture.history.btn=📖 Read History Book (.txt)
+
+map.title=Complete Map of La-Ukuka Continent
+
+footer.title=Waon-Jinkoku
+footer.wzn=WZN-Waon Broadcasting
+footer.copy=&copy; 2024 Wajin-Tofu Records. All Rights Reserved.
+
+modal.entry.title=Continental Immigration Review Form
+modal.entry.name=Applicant Name
+modal.entry.purpose=Purpose of Entry
+modal.entry.type=Staff Type Possessed
+modal.entry.type.op1=General Use (Standard)
+modal.entry.type.op2=Unstable (From Demon Lord's Territory)
+modal.entry.type.op3=None
+modal.entry.travel=Mode of Travel
+modal.entry.travel.op1=Sea (Scheduled Ship)
+modal.entry.travel.op2=Formation (Spatial Transfer)
+modal.entry.check=I swear to abide by the laws of Waon-Jinkoku and not disturb its "stability".
+modal.entry.submit=Submit Application Data
+
+modal.census.title=1st Waon-Jinkoku National Census
+modal.census.sub=National Population Census
+modal.census.loc=Current Residence
+modal.census.loc.op0=Please select
+modal.census.loc.op1=Wajin-Tofu (Central)
+modal.census.loc.op2=La-Ukuka Boundary (Buffer Zone)
+modal.census.loc.op3=Land of Instability (Former Territory)
+modal.census.loc.op4=Overseas / In Transit
+modal.census.age=Age Group
+modal.census.age.op1=Under 20
+modal.census.age.op2=20s to 40s
+modal.census.age.op3=40s to 60s
+modal.census.age.op4=Over 60
+modal.census.age.op5=Immortal
+modal.census.stab=Current Degree of "Stability" (Self-Reported)
+modal.census.stab.l=Unstable
+modal.census.stab.m=Neutral
+modal.census.stab.r=Fully Stable
+modal.census.req=Requests/Opinions to the Government
+modal.census.submit=Officially Submit Answers
+
+msg.btn=Confirm
+
+db.setting.title=Waon-Jinkoku Basic Settings
+db.setting.lang_off=Official Language: Shell-up
+db.setting.capital=Capital: Wajin-Tofu
+db.setting.continent=Continent: La-Ukuka
+db.setting.lang_use=🌐 Languages Spoken:<br>[Unique Languages (Compatible)] Shell-up / Sheran-ibu / Sheran-yabu<br>[Existing Languages] English (Ancient, Modern) / Japanese (Often without accent) / !anbyam *1
+
+db.food.title=Diet
+db.food.desc=A diet influenced by Japanese culture, such as sashimi, rice, and curry.<br>Even with unknown creatures, there is a culture of **"If it's edible, make it sashimi."**<br>Therefore, the question isn't "Can we eat this?" but **"What happens if we make it sashimi?"**<br>Waon-Jinkoku endemic species are also commonly turned into sashimi.
+
+db.culture.title=Cultural and Technological Level
+db.culture.desc=Hygiene management is thoroughly established, and there are traditional cultures like using dragon wings as cloth.<br>They also possess unknown technologies such as staffs. While these are hard to explain with science (though not impossible), they require specialized knowledge in magic engineering.
+
+db.danger.title=Danger Level: Low
+db.danger.desc="Safe for people of different cultures", "Good hygiene", and "Relatively good public safety due to the Staff of Waon".<br>From these points, the danger level is considered low.<br><br>However, **"some areas have a high possibility of getting caught in spatial distortions,"** so it is better to stay in the capital (who knows what happens if you leave).
+
+db.qa.title=Q&A / Glossary
+db.qa.q1=Q. What happens if I interact with T.S?
+db.qa.a1=A. You can't in the first place. T.S is arguably the "most important person" in Waon-Jinkoku.
+db.qa.q2=Q. What if I force an interaction?
+db.qa.a2=A. You die. Even if you survive, extreme penalty and execution. "You'll become an experimental tool for multiple anomalous organizations." "It's a miracle if you return in humanoid form."
+db.qa.q3=Q. Is there a way to interact with T.S?
+db.qa.a3=A. Yes.<br>- Submit a permit to the government and conduct an interview.<br>- Get prior permission from T.S directly (including proof).<br>- Be rescued and protected by the Anomaly Countermeasure Headquarters when caught in an anomaly (within the capital).
+db.qa.q4=Q. What is the relationship with the same art creator R?
+db.qa.a4=A. It's not well understood. It's certain that they survived after interacting.
+db.qa.q5=Q. Is there a way to go outside the capital?
+db.qa.a5=A. With a permit, you can explore freely. However, traveling outside the capital for tourism is not recommended. If you go, take strict safety measures and have a purpose.
+db.qa.q6=Q. What happens if I go outside the capital?
+db.qa.a6=A. The effects of spatial distortions are unknown. If you're lucky, you might just get stuck in a wall; if unlucky, you might become a wall yourself or turn into liquid. Take strict safety measures.
+db.qa.q7=Q. Can I interact with people from onva?
+db.qa.a7=A. You can talk to them, but asking about onva is prohibited.<br>Reason: Because onva is a hyper-optimized surveillance state.
+
+db.glossary.title=Glossary: Zaravasa
+db.glossary.desc=*1 Rarely, people living in onva who have become zaravasa immigrate here.<br><br>**Zaravasa [Adj]**<br>Derived from Shell-up. A state of mental and physical exhaustion from being too optimized. Mainly used by immigrants from onva.
+
+db.chars.title=Registered Personnel / Classified Data
+db.char1.name=Kai Renos
+db.char1.desc=Profession: Diplomat / Languages: Shell-up, Sheran-yabu, Japanese / Race: Human
+db.char2.name=T.S (Provisional Nationality)
+db.char2.desc=Profession: Classified / Race: Humanoid Lifeform / Age: 3i<br>Researches and improves the staffs of Waon-Jinkoku. Connected to murins Inc. and the Semiotics Lab "Fictional Question Exhibition".
+db.char3.name=Rigesu Albalusu
+db.char3.desc=Race: War Wolf / Age: 13<br>The long-lost younger brother of Ritsu Albalusu. Has the power to interact with T.S. Often makes incomprehensible posters.
+db.char4.name=Leia Mist
+db.char4.desc=Profession: Linguist & Librarian / Languages: Shell-up, Ancient Shell-up, Japanese / Race: Human / Age: 23<br>Manager of the Waon-Jinkoku Central Library. Researches ancient Shell-up literature and lost magical texts.
+db.char5.name=Noa Veris
+db.char5.desc=Profession: Symbolic Engineer / Languages: Shell-up, Sheran-yabu / Race: Human / Age: 24<br>Belongs to the Royal Symbolic Engineering Research Bureau. Designs and develops the "symbol circuits" embedded in staffs.
+db.char6.name=El Safia
+db.char6.desc=Profession: Magic Researcher / Languages: Shell-up, Japanese / Race: Human / Age: 42<br>Chief researcher at the Waon-Jinkoku Academy of Magic Science. Specializes in the interaction between staffs and symbolic energy.
+db.char7.name=Iris Fen
+db.char7.desc=Profession: International Analyst / Languages: Shell-up, Sheran-yabu, Japanese, English / Race: Human / Age: 19<br>Belongs to the Ministry of Foreign Affairs Intelligence Analysis Office. Investigates foreign cultures and languages to advise diplomats.
+db.char8.name=R-09 "Aluka"
+db.char8.desc=Profession: Research Support AI Lifeform / Languages: Shell-up, Japanese, Machine Language / Race: Humanoid Lifeform / Age: NaN<br>A humanoid support lifeform rumored to have been co-developed by T.S. Assists in staff experiments and symbolic calculations, but most development logs are classified.
+
+db.staffs.title=Types of Staffs
+db.staff1.title=Tectonics
+db.staff1.desc=The oldest and greatest staff. Features a Y-shaped support, making it highly stable and immune to breaking, allowing for easy magic handling.
+db.staff2.title=Rekis-Class Staff
+db.staff2.desc=Staffs that interfere with the laws of the world itself, or possess overwhelming power.<br>Examples: Interrobang (‽), Mathematics, Nuclear/Virus, Confirmation (!), Uncertainty (?)<br>Since these support the world, they are on a different level. However, they are currently broken.<br><br>**Why did they break?**<br>The world cannot sustain Rekis-Class staffs for long periods. Due to their nature, contradictions and collapses occur, causing them to self-destruct when they can no longer bear it.<br><br>**What remains?**<br>The staffs are broken, but blueprints, lore, fragments, and myths remain. Everyone knows "they existed in the past."<br><br>The current King's Staff (Staff of Waon) is not a Rekis-Class. It is a staff that respects "national unity." (Believed to be influenced by Japanese culture)
+
+db.history.title=History of Waon-Jinkoku: From "‽" to "Blank Space"
+db.history.1=🌒 Dawn and the Price of Tuning<br>In East Era 850, Waon-Jinkoku was founded to control "Symbol" energy via "Staffs". However, a craftsman who despaired at perfect tuning turned into a Demon Lord with the staffs of "Nuclear and Virus" that destroy everything. The craftsmen of the time sealed him in the "Forest of Rejected Drafts" using the staff of "?" (Staff of Uncertainty) to blur facts, but causal distortions remained in the world.
+db.history.2=📘 Tanato's Journey and the Miracle of "‽"<br>Time passed, and a boy named Tanato with an incomplete "doodle"-like staff arose. He learned the world's basic attributes and foreign technologies, evolving his staff into "Tectonics". When the 4D threat "Staff of God" appeared, Tanato released the taboos "Nuclear/Virus" and "?" to defeat it. In response to the subsequent world collapse, he merged the craftsmen's "Staff of Confirmation (!)" with "?", creating the staff of "‽" (Interrobang) where question and certainty coexist.<br>The Demon Lord, seeing his suffering tuned as an "indispensable part of the world" inside Tanato's staff, melted into the period of "‽", becoming the foundation of the world.
+db.history.3=⚔️ A New Leader and the "Tribe Without Staffs"<br>Five years later, Tanato passed away, and the young man Nakashita became the leader. The peaceful country was shaken by an encounter with a shipwrecked "Tribe that does not use staffs." Challenged to a duel by their warlike leader, Nakashita manipulated the wind with a green staff, blowing away the giant sword with an overwhelming difference in power.<br>However, what remained was a deep question. "Staffs are too right. That's why we dared to choose instability." They did not lack staffs out of ignorance; they chose an uncertain future as "another answer" that Waon-Jinkoku did not choose.
+db.history.4=🌅 The Blank Space in the Rejected Drafts Archive<br>Nakashita erased this encounter from official records, secretly writing it in the tuners' "Rejected Drafts Archive."<br><br>Rejected Draft No. !?-β "The Choice Not to Have a Staff"<br>Stability is not justice. But instability is not evil either. The world cannot move forward with only "confirmed questions".<br><br>The tuning of "‽" containing the Demon Lord's heat, and the will of those without staffs. Wrapped in all this, the vivid flag sways quietly and anew in the Waon-Jinkoku sky today.
