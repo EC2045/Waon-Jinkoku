@@ -83,7 +83,7 @@ async function setPortalLanguage(language, remember = true) {
     const request = ++languageRequest;
     if (!supportedLanguages.includes(language)) language = 'ja';
     try {
-        const response = await fetch(`${language}.lang`);
+        const response = await fetch(`${language}.lang?v=20261101-portal2`);
         if (!response.ok) throw new Error('Language unavailable');
         const data = parseLanguage(await response.text());
         if (request !== languageRequest) return;
