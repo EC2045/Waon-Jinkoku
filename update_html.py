@@ -386,7 +386,7 @@ html_content = """<!DOCTYPE html>
             <button onclick="hideMsg()" class="bg-white text-black px-10 py-2 font-bold pixel-font hover:bg-zinc-200 transition" data-lang-key="msg.btn">確認</button>
         </div>
     </div>
-  <script src="src/script_0c08256f.js?v=20261101-portal2"></script>
+  <script src="src/script_0c08256f.js?v=20261101-shellvail1"></script>
 
 </body>
 </html>
