@@ -71,7 +71,7 @@ db.setting.title=Landaj informoj
 db.setting.lang_off=Oficiala Lingvo: Ŝel-up
 db.setting.capital=Ĉefurbo: Wajin-Tofu
 db.setting.continent=Kontinento: La-Ukuka
-db.setting.lang_use=🌐 Parolataj Lingvoj:<br>[Unikaj Lingvoj (Kongruaj)] Ŝel-up / Ŝeran-ibu / Ŝeran-yabu<br>[Ekzistantaj Lingvoj] Angla (Antikva, Moderna) / Japana (Ofte sen akĉento) / !anbyam *1
+db.setting.lang_use=🌐 Parolataj Lingvoj:<br><a href="https://kgar.f5.si/shellvail">Shellvail</a> / [Unikaj Lingvoj (Kongruaj)] Ŝel-up / Ŝeran-ibu / Ŝeran-yabu<br>[Ekzistantaj Lingvoj] Angla (Antikva, Moderna) / Japana (Ofte sen akĉento) / !anbyam *1
 
 db.food.title=Dieto
 db.food.desc=Dieto influita de la japana kulturo, kiel saŝimio, rizo, kaj kareo.<br>Eĉ ĉe nekonataj estaĵoj, ekzistas kulturo de **"Se ĝi estas manĝebla, faru ĝin saŝimio."**<br>Sekve, la demando ne estas "Ĉu ni povas manĝi ĉi tion?" sed **"Kio okazas se ni faras ĝin saŝimio?"**<br>Endemiaj specioj de Waon-Jinkoku ankaŭ kutime fariĝas saŝimio.

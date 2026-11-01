@@ -76,7 +76,7 @@ db.setting.title=和温陣国の基本情報
 db.setting.lang_off=公用語：シェルアップ語
 db.setting.capital=首都：和陣当府
 db.setting.continent=大陸：ラ＝ウクカ大陸
-db.setting.lang_use=🌐 使われている言語：<br>【独自言語(互換性がある)】シェルアップ語 / シェランイブ語 / シェランヤブ語<br>【既存言語】英語（古代,現代）/ 日本語（訛りがある、ない場合が多い） / !anbyam ※1
+db.setting.lang_use=🌐 使われている言語：<br><a href="https://kgar.f5.si/shellvail">シェルヴァイル語</a> / 【独自言語(互換性がある)】シェルアップ語 / シェランイブ語 / シェランヤブ語<br>【既存言語】英語（古代,現代）/ 日本語（訛りがある、ない場合が多い） / !anbyam ※1
 
 db.food.title=食生活
 db.food.desc=刺身、米、カレーなどといった日本文化に影響を受けた食生活。<br>未知の生物でも**「食べられるなら刺身」**という文化がある。<br>そのため、「この生物食える？」ではなく**「刺身にするとどうなる？」**という発想になる。<br>和温陣国固有種も普通に刺身になる。
@@ -258,7 +258,7 @@ db.setting.title=National information
 db.setting.lang_off=Official Language: Shell-up
 db.setting.capital=Capital: Wajin-Tofu
 db.setting.continent=Continent: La-Ukuka
-db.setting.lang_use=🌐 Languages Spoken:<br>[Unique Languages (Compatible)] Shell-up / Sheran-ibu / Sheran-yabu<br>[Existing Languages] English (Ancient, Modern) / Japanese (Often without accent) / !anbyam *1
+db.setting.lang_use=🌐 Languages Spoken:<br><a href="https://kgar.f5.si/shellvail">Shellvail</a> / [Unique Languages (Compatible)] Shell-up / Sheran-ibu / Sheran-yabu<br>[Existing Languages] English (Ancient, Modern) / Japanese (Often without accent) / !anbyam *1
 
 db.food.title=Diet
 db.food.desc=A diet influenced by Japanese culture, such as sashimi, rice, and curry.<br>Even with unknown creatures, there is a culture of **"If it's edible, make it sashimi."**<br>Therefore, the question isn't "Can we eat this?" but **"What happens if we make it sashimi?"**<br>Waon-Jinkoku endemic species are also commonly turned into sashimi.
@@ -440,7 +440,7 @@ db.setting.title=Landaj informoj
 db.setting.lang_off=Oficiala Lingvo: Ŝel-up
 db.setting.capital=Ĉefurbo: Wajin-Tofu
 db.setting.continent=Kontinento: La-Ukuka
-db.setting.lang_use=🌐 Parolataj Lingvoj:<br>[Unikaj Lingvoj (Kongruaj)] Ŝel-up / Ŝeran-ibu / Ŝeran-yabu<br>[Ekzistantaj Lingvoj] Angla (Antikva, Moderna) / Japana (Ofte sen akĉento) / !anbyam *1
+db.setting.lang_use=🌐 Parolataj Lingvoj:<br><a href="https://kgar.f5.si/shellvail">Shellvail</a> / [Unikaj Lingvoj (Kongruaj)] Ŝel-up / Ŝeran-ibu / Ŝeran-yabu<br>[Ekzistantaj Lingvoj] Angla (Antikva, Moderna) / Japana (Ofte sen akĉento) / !anbyam *1
 
 db.food.title=Dieto
 db.food.desc=Dieto influita de la japana kulturo, kiel saŝimio, rizo, kaj kareo.<br>Eĉ ĉe nekonataj estaĵoj, ekzistas kulturo de **"Se ĝi estas manĝebla, faru ĝin saŝimio."**<br>Sekve, la demando ne estas "Ĉu ni povas manĝi ĉi tion?" sed **"Kio okazas se ni faras ĝin saŝimio?"**<br>Endemiaj specioj de Waon-Jinkoku ankaŭ kutime fariĝas saŝimio.

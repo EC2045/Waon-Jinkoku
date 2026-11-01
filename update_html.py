@@ -154,7 +154,7 @@ html_content = """<!DOCTYPE html>
                         <div class="bg-black/50 p-4 rounded border border-white/10" data-lang-key="db.setting.continent">大陸：ラ＝ウクカ大陸</div>
                     </div>
                     <div class="text-sm text-zinc-300 leading-relaxed bg-black/40 p-4 rounded border border-white/5" data-lang-key="db.setting.lang_use">
-                        🌐 使われている言語：<br>【独自言語(互換性がある)】シェルアップ語 / シェランイブ語 / シェランヤブ語<br>【既存言語】英語（古代,現代）/ 日本語（訛りがある、ない場合が多い） / !anbyam ※1
+                        🌐 使われている言語：<br><a href="https://kgar.f5.si/shellvail">シェルヴァイル語</a> / 【独自言語(互換性がある)】シェルアップ語 / シェランイブ語 / シェランヤブ語<br>【既存言語】英語（古代,現代）/ 日本語（訛りがある、ない場合が多い） / !anbyam ※1
                     </div>
                 </section>
 

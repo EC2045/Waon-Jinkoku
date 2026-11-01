@@ -71,7 +71,7 @@ db.setting.title=National information
 db.setting.lang_off=Official Language: Shell-up
 db.setting.capital=Capital: Wajin-Tofu
 db.setting.continent=Continent: La-Ukuka
-db.setting.lang_use=🌐 Languages Spoken:<br>[Unique Languages (Compatible)] Shell-up / Sheran-ibu / Sheran-yabu<br>[Existing Languages] English (Ancient, Modern) / Japanese (Often without accent) / !anbyam *1
+db.setting.lang_use=🌐 Languages Spoken:<br><a href="https://kgar.f5.si/shellvail">Shellvail</a> / [Unique Languages (Compatible)] Shell-up / Sheran-ibu / Sheran-yabu<br>[Existing Languages] English (Ancient, Modern) / Japanese (Often without accent) / !anbyam *1
 
 db.food.title=Diet
 db.food.desc=A diet influenced by Japanese culture, such as sashimi, rice, and curry.<br>Even with unknown creatures, there is a culture of **"If it's edible, make it sashimi."**<br>Therefore, the question isn't "Can we eat this?" but **"What happens if we make it sashimi?"**<br>Waon-Jinkoku endemic species are also commonly turned into sashimi.
