@@ -1,60 +1,64 @@
+from pathlib import Path
+
 html_content = """<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang-key="nav.title">和温陣国 公式サイト</title>
+    <title data-lang-key="page.title">和温陣国 公式サイト</title>
     <link rel="icon" href="icon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=DotGothic16&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="src/style_44d90307.css">
-    <script src="../scripts/font.js" data-lang-path="{lang}.lang"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style_44d90307.css?v=20261101-portal">
+
 </head>
 <body>
+    <a class="skip-link" href="#main-content" data-lang-key="portal.skip">本文へ移動</a>
 
-    <!-- ナビゲーション -->
-    <nav class="fixed w-full z-50 bg-black/90 border-b border-white/10 px-6 py-4 flex justify-between items-center backdrop-blur-md">
-        <div class="text-2xl font-bold tracking-widest pixel-font flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-gradient-to-b from-red-600 to-blue-700 shadow-[0_0_10px_rgba(255,0,0,0.3)]"></div>
-            <span data-lang-key="nav.title">和温陣国</span>
+    <header class="government-header">
+        <div class="official-strip"><div class="portal-container"><span data-lang-key="portal.official">和温陣国 公式ポータル</span><span data-lang-key="portal.motto">均衡と調和、秩序ある混沌</span></div></div>
+        <div class="masthead portal-container">
+            <a class="national-brand" href="#tab-home"><img src="icon.png" alt=""><span><strong data-lang-key="nav.title">和温陣国</strong><small>WAON JINKOKU</small></span></a>
+            <div class="header-tools"><a href="https://ec2045.github.io/WZN/" data-lang-key="nav.wzn">和温放送局 (WZN)</a><label><span class="sr-only" data-lang-key="portal.language">表示言語</span><select id="portal-language"><option value="ja">日本語</option><option value="en">English</option><option value="eo">Esperanto</option></select></label></div>
         </div>
-        <div class="hidden md:flex space-x-6 text-xs uppercase tracking-widest items-center">
-            <a href="https://ec2045.github.io/WZN/" target="_blank" class="flex items-center gap-2 text-yellow-500 hover:text-yellow-400 transition bg-yellow-500/10 px-3 py-1 rounded border border-yellow-500/20">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"></span>
-                </span>
-                <span data-lang-key="nav.wzn">和温放送局 (WZN)</span>
-            </a>
-            <a href="#contact" class="hover:text-red-500 transition" data-lang-key="nav.contact">謁見の間</a>
-        </div>
-    </nav>
-
-    <!-- ヒーロー -->
-    <section class="hero-section">
-        <img src="旗.png" alt="和温陣国の旗" class="hero-bg-image">
-        <div class="text-center z-10 px-4 mt-12">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 pixel-font drop-shadow-lg text-white" data-lang-key="hero.title">和温陣国</h1>
-            <p class="text-zinc-500 tracking-[0.4em] text-sm uppercase pixel-font" data-lang-key="hero.subtitle">State Information Management System</p>
-        </div>
-    </section>
-
-    <!-- タブナビ -->
-    <div class="sticky top-[73px] z-40 bg-black border-b border-white/10">
-        <div class="max-w-6xl mx-auto flex justify-center overflow-x-auto">
-            <button onclick="switchTab('tab-overview')" id="btn-tab-overview" class="tab-btn active pixel-font text-xs md:text-sm uppercase whitespace-nowrap" data-lang-key="tab.overview">国家概要</button>
-            <button onclick="switchTab('tab-culture')" id="btn-tab-culture" class="tab-btn pixel-font text-xs md:text-sm uppercase whitespace-nowrap" data-lang-key="tab.culture">文化・歴史</button>
-            <button onclick="switchTab('tab-map')" id="btn-tab-map" class="tab-btn pixel-font text-xs md:text-sm uppercase whitespace-nowrap" data-lang-key="tab.map">国土地図</button>
-            <button onclick="switchTab('tab-database')" id="btn-tab-database" class="tab-btn pixel-font text-xs md:text-sm uppercase whitespace-nowrap text-red-500" data-lang-key="tab.database">データベース</button>
-        </div>
-    </div>
+        <nav class="portal-navigation" aria-label="Main"><div class="portal-container">
+            <a href="#tab-home" id="btn-tab-home" class="tab-btn active" aria-current="page" data-lang-key="portal.home">ホーム</a>
+            <a href="#tab-overview" id="btn-tab-overview" class="tab-btn" data-lang-key="tab.overview">暮らし・入国</a>
+            <a href="#tab-culture" id="btn-tab-culture" class="tab-btn" data-lang-key="tab.culture">文化・歴史</a>
+            <a href="#tab-map" id="btn-tab-map" class="tab-btn" data-lang-key="tab.map">国土・地図</a>
+            <a href="#tab-database" id="btn-tab-database" class="tab-btn" data-lang-key="tab.database">国の紹介・公文書</a>
+        </div></nav>
+    </header>
 
     <!-- コンテンツ -->
-    <main class="max-w-6xl mx-auto py-12 px-6 min-h-screen">
+    <main id="main-content" tabindex="-1" class="portal-main max-w-6xl mx-auto py-12 px-6 min-h-screen">
+        <div id="tab-home" class="tab-content active">
+            <section class="national-hero" aria-labelledby="welcome-title">
+                <div class="hero-copy"><p class="eyebrow" data-lang-key="portal.hero.label">和温陣国公式サイト</p><h1 id="welcome-title" data-lang-key="portal.hero.title">調和をつなぎ、<br>ともに暮らす。</h1><p data-lang-key="portal.hero.desc">ラ＝ウクカ大陸に息づく、杖と陣の国。暮らしの案内から、渡航、文化、国のしくみまで。和温陣国の情報をお届けします。</p><a class="primary-link" href="#tab-overview"><span data-lang-key="portal.hero.action">入国・滞在のご案内</span><span aria-hidden="true"> →</span></a></div>
+                <figure><img src="旗.png" data-lang-alt="portal.flag.alt" alt="空にはためく和温陣国の国旗"><figcaption data-lang-key="portal.flag.caption">和温陣国の国旗 — デジタルと伝統、安定の象徴</figcaption></figure>
+            </section>
+            <aside class="travel-advisory"><span class="advisory-label" data-lang-key="portal.safety.label">渡航・安全情報</span><p data-lang-key="portal.safety.desc">首都以外の地域では空間の歪みに注意が必要です。移動前に、渡航案内と地域の情報をご確認ください。</p><a href="#tab-database" data-lang-key="portal.safety.link">安全上の注意 →</a></aside>
+            <section class="portal-section" aria-labelledby="services-title"><div class="section-heading"><div><p class="eyebrow">SERVICES & INFORMATION</p><h2 id="services-title" data-lang-key="portal.services.title">目的から探す</h2></div><p data-lang-key="portal.services.desc">必要な情報へ、ここから。</p></div>
+                <div class="service-grid">
+                    <a class="service-card" href="#tab-overview"><span class="service-number">01 / VISIT</span><h3 data-lang-key="portal.visit.title">入国・滞在</h3><p data-lang-key="portal.visit.desc">入国審査と渡航方法のご案内。</p><span class="card-arrow" aria-hidden="true">↗</span></a>
+                    <a class="service-card" href="#tab-overview"><span class="service-number">02 / RESIDENTS</span><h3 data-lang-key="portal.residents.title">国民の皆さまへ</h3><p data-lang-key="portal.residents.desc">国勢調査と暮らしに関する情報。</p><span class="card-arrow" aria-hidden="true">↗</span></a>
+                    <a class="service-card" href="#tab-culture"><span class="service-number">03 / DISCOVER</span><h3 data-lang-key="portal.discover.title">和温陣国を知る</h3><p data-lang-key="portal.discover.desc">杖の文化と、この国が歩んだ歴史。</p><span class="card-arrow" aria-hidden="true">↗</span></a>
+                </div>
+            </section>
+            <section class="portal-section information-grid">
+                <div><div class="section-heading"><div><p class="eyebrow">PUBLIC INFORMATION</p><h2 data-lang-key="portal.info.title">ご案内・関連機関</h2></div></div>
+                    <a class="information-row" href="https://ec2045.github.io/WZN/"><span class="info-tag" data-lang-key="portal.info.news">報道</span><span data-lang-key="portal.info.wzn">和温放送局 — ニュース・国内の情勢</span><span aria-hidden="true">↗</span></a>
+                    <a class="information-row" href="#tab-map"><span class="info-tag" data-lang-key="portal.info.land">国土</span><span data-lang-key="portal.info.map">ラ＝ウクカ大陸の地図を見る</span><span aria-hidden="true">→</span></a>
+                    <a class="information-row" href="#tab-database"><span class="info-tag" data-lang-key="portal.info.records">公文書</span><span data-lang-key="portal.info.docs">国の基本情報・公開資料を読む</span><span aria-hidden="true">→</span></a>
+                    <a class="information-row" href="history.txt"><span class="info-tag" data-lang-key="portal.info.culture">歴史</span><span data-lang-key="portal.info.history">和温陣国の歴史書を読む（TXT）</span><span aria-hidden="true">→</span></a>
+                </div>
+                <aside class="country-summary"><p class="eyebrow">ABOUT THE NATION</p><h2 data-lang-key="portal.country.title">和温陣国について</h2><p data-lang-key="portal.country.desc">杖を介して陣を展開し、人々の暮らしと国の安定を支える国です。</p><dl><div><dt data-lang-key="portal.capital">首都</dt><dd data-lang-key="portal.capital.value">和陣当府</dd></div><div><dt data-lang-key="portal.continent">大陸</dt><dd data-lang-key="portal.continent.value">ラ＝ウクカ大陸</dd></div></dl><a href="#tab-database" data-lang-key="portal.country.link">国のしくみ・基本情報 →</a></aside>
+            </section>
+        </div>
+
         
         <!-- 国家概要 -->
-        <div id="tab-overview" class="tab-content active">
+        <div id="tab-overview" class="tab-content"><div class="page-heading"><p class="eyebrow">LIVING & VISITING</p><h1 data-lang-key="tab.overview">暮らし・入国</h1><p data-lang-key="portal.overview.desc">渡航の準備、入国審査、国民向けのご案内。</p></div>
             <div class="grid md:grid-cols-2 gap-12 items-start">
                 <div class="space-y-8">
                     <div class="border-l-4 border-red-600 pl-6">
@@ -95,7 +99,7 @@ html_content = """<!DOCTYPE html>
         </div>
 
         <!-- 文化・歴史 -->
-        <div id="tab-culture" class="tab-content">
+        <div id="tab-culture" class="tab-content"><div class="page-heading"><p class="eyebrow">CULTURE & HISTORY</p><h1 data-lang-key="tab.culture">文化・歴史</h1></div>
             <div class="space-y-16">
                 <section class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="space-y-6">
@@ -139,11 +143,11 @@ html_content = """<!DOCTYPE html>
         </div>
 
         <!-- データベース（新規追加） -->
-        <div id="tab-database" class="tab-content">
+        <div id="tab-database" class="tab-content"><div class="page-heading"><p class="eyebrow">GOVERNMENT & RECORDS</p><h1 data-lang-key="tab.database">国の紹介・公文書</h1></div>
             <div class="space-y-12">
                 <!-- 基本設定 -->
                 <section class="card p-8 border-l-4 border-red-600 bg-zinc-900/80">
-                    <h2 class="text-2xl font-bold mb-6 pixel-font text-red-500" data-lang-key="db.setting.title">和温陣国 基本設定</h2>
+                    <h2 class="text-2xl font-bold mb-6 pixel-font text-red-500" data-lang-key="db.setting.title">和温陣国の基本情報</h2>
                     <div class="grid md:grid-cols-3 gap-4 mb-6 text-sm">
                         <div class="bg-black/50 p-4 rounded border border-white/10" data-lang-key="db.setting.lang_off">公用語：シェルアップ語</div>
                         <div class="bg-black/50 p-4 rounded border border-white/10" data-lang-key="db.setting.capital">首都：和陣当府</div>
@@ -178,7 +182,7 @@ html_content = """<!DOCTYPE html>
 
                 <!-- 登録人物 -->
                 <section class="space-y-6">
-                    <h2 class="text-2xl font-bold pixel-font border-l-4 border-red-600 pl-4" data-lang-key="db.chars.title">登録人物・機密データ</h2>
+                    <h2 class="text-2xl font-bold pixel-font border-l-4 border-red-600 pl-4" data-lang-key="db.chars.title">関係者・公開情報</h2>
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="card p-5 bg-zinc-900/90 border border-white/10">
                             <h4 class="text-md font-bold pixel-font text-red-400 mb-1" data-lang-key="db.char1.name">カイ・レノス</h4>
@@ -271,45 +275,45 @@ html_content = """<!DOCTYPE html>
     </main>
 
     <!-- フッター -->
-    <footer id="contact" class="bg-black py-16 border-t border-white/10">
+    <footer id="contact" class="government-footer py-16 border-t border-white/10">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <div class="text-2xl font-bold pixel-font mb-6 tracking-widest text-zinc-400" data-lang-key="footer.title">和温陣国</div>
             <div class="flex justify-center gap-8 mb-8">
                 <a href="https://ec2045.github.io/WZN/" target="_blank" class="text-yellow-600 hover:text-yellow-400 transition text-sm font-bold pixel-font" data-lang-key="footer.wzn">WZN-和温放送局</a>
             </div>
-            <p class="text-zinc-700 text-[10px]" data-lang-key="footer.copy">&copy; 2024 Wajin-Tofu Records. All Rights Reserved.</p>
+            <p class="fiction-note" data-lang-key="portal.fiction">このサイトは東暦世界の架空国家「和温陣国」の公式サイトです。</p><p class="text-zinc-700 text-[10px]" data-lang-key="footer.copy">&copy; 2024 Wajin-Tofu Records. All Rights Reserved.</p>
         </div>
     </footer>
 
     <!-- 入国審査モーダル -->
-    <div id="entryModal" class="modal fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-md overflow-y-auto">
+    <div id="entryModal" role="dialog" aria-modal="true" aria-labelledby="entryModal-title" class="modal fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-md overflow-y-auto">
         <div class="bg-zinc-900 max-w-lg mx-auto my-10 p-8 border border-white/10 relative shadow-2xl">
-            <span class="absolute top-4 right-4 text-3xl cursor-pointer text-zinc-500 hover:text-white" onclick="closeModal('entryModal')">&times;</span>
+            <button type="button" class="modal-close" onclick="closeModal('entryModal')" data-lang-aria="portal.close" aria-label="閉じる">×</button>
             <div class="mb-6 border-b border-blue-600/30 pb-4">
-                <h2 class="text-2xl font-bold pixel-font text-blue-500 italic" data-lang-key="modal.entry.title">大陸入国審査フォーム</h2>
+                <h2 class="text-2xl font-bold pixel-font text-blue-500 italic" id="entryModal-title" data-lang-key="modal.entry.title">大陸入国審査フォーム</h2><p class="form-note" data-lang-key="portal.form.note">体験用フォームです。入力内容は送信・保存されません。</p>
             </div>
             <form id="entryForm" onsubmit="handleEntrySubmission(event)">
                 <div class="space-y-4">
                     <div>
-                        <label class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.entry.name">申請者名</label>
+                        <label for="entryName" class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.entry.name">申請者名</label>
                         <input type="text" id="entryName" required placeholder="Name / ID">
                     </div>
                     <div>
-                        <label class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.entry.purpose">入国目的</label>
+                        <label for="entryPurpose" class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.entry.purpose">入国目的</label>
                         <textarea id="entryPurpose" rows="3" required placeholder="目的を記入してください"></textarea>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.entry.type">所持杖の種類</label>
-                            <select id="staffType">
+                            <label for="staffType" class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.entry.type">所持杖の種類</label>
+                        <select id="staffType">
                                 <option value="standard" data-lang-key="modal.entry.type.op1">一般用（標準）</option>
                                 <option value="unstable" data-lang-key="modal.entry.type.op2">不安定（魔王領産）</option>
                                 <option value="none" data-lang-key="modal.entry.type.op3">未所持</option>
                             </select>
                         </div>
                         <div>
-                            <label class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.entry.travel">渡航方法</label>
-                            <select id="travelMode">
+                            <label for="travelMode" class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.entry.travel">渡航方法</label>
+                        <select id="travelMode">
                                 <option value="sea" data-lang-key="modal.entry.travel.op1">海上（定期船）</option>
                                 <option value="teleport" data-lang-key="modal.entry.travel.op2">陣（空間転移）</option>
                             </select>
@@ -326,18 +330,18 @@ html_content = """<!DOCTYPE html>
     </div>
 
     <!-- 国勢調査モーダル -->
-    <div id="censusModal" class="modal fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-md overflow-y-auto">
+    <div id="censusModal" role="dialog" aria-modal="true" aria-labelledby="censusModal-title" class="modal fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-md overflow-y-auto">
         <div class="bg-zinc-900 max-w-lg mx-auto my-10 p-8 border border-white/10 relative shadow-2xl">
-            <span class="absolute top-4 right-4 text-3xl cursor-pointer text-zinc-500 hover:text-white" onclick="closeModal('censusModal')">&times;</span>
+            <button type="button" class="modal-close" onclick="closeModal('censusModal')" data-lang-aria="portal.close" aria-label="閉じる">×</button>
             <div class="mb-6 border-b border-red-600/30 pb-4">
-                <h2 class="text-2xl font-bold pixel-font text-red-500 italic" data-lang-key="modal.census.title">第1回 和温陣国 国勢調査</h2>
-                <p class="text-[10px] text-zinc-500 mt-1 uppercase" data-lang-key="modal.census.sub">National Population Census</p>
+                <h2 class="text-2xl font-bold pixel-font text-red-500 italic" id="censusModal-title" data-lang-key="modal.census.title">第1回 和温陣国 国勢調査</h2>
+                <p class="text-[10px] text-zinc-500 mt-1 uppercase" data-lang-key="modal.census.sub">National Population Census</p><p class="form-note" data-lang-key="portal.form.note">体験用フォームです。入力内容は送信・保存されません。</p>
             </div>
             <form onsubmit="handleCensusSubmission(event)">
                 <div class="space-y-5">
                     <div>
-                        <label class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.census.loc">現在の居住地</label>
-                        <select required>
+                        <label for="portal-field-5" class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.census.loc">現在の居住地</label>
+                        <select required id="portal-field-5">
                             <option value="" data-lang-key="modal.census.loc.op0">選択してください</option>
                             <option value="capital" data-lang-key="modal.census.loc.op1">和陣当府（中央）</option>
                             <option value="boundary" data-lang-key="modal.census.loc.op2">ラ＝ウクカ境界（緩衝区）</option>
@@ -346,8 +350,8 @@ html_content = """<!DOCTYPE html>
                         </select>
                     </div>
                     <div>
-                        <label class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.census.age">年齢層</label>
-                        <select required>
+                        <label for="portal-field-6" class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.census.age">年齢層</label>
+                        <select required id="portal-field-6">
                             <option value="under20" data-lang-key="modal.census.age.op1">20歳未満</option>
                             <option value="20-40" data-lang-key="modal.census.age.op2">20代〜40代</option>
                             <option value="40-60" data-lang-key="modal.census.age.op3">40代〜60代</option>
@@ -356,8 +360,8 @@ html_content = """<!DOCTYPE html>
                         </select>
                     </div>
                     <div>
-                        <label class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.census.stab">現在の「安定」度合（自己申告）</label>
-                        <input type="range" min="1" max="100" value="80" class="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-red-600">
+                        <label for="portal-field-7" class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.census.stab">現在の「安定」度合（自己申告）</label>
+                        <input type="range" min="1" max="100" value="80" class="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-red-600" id="portal-field-7">
                         <div class="flex justify-between text-[10px] text-zinc-600 mt-1">
                             <span data-lang-key="modal.census.stab.l">不安定</span>
                             <span data-lang-key="modal.census.stab.m">中立</span>
@@ -365,8 +369,8 @@ html_content = """<!DOCTYPE html>
                         </div>
                     </div>
                     <div>
-                        <label class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.census.req">政府への要望・意見</label>
-                        <textarea placeholder="（例）杖の配給を増やしてほしい、等" rows="3"></textarea>
+                        <label for="portal-field-8" class="text-xs text-zinc-500 block mb-1" data-lang-key="modal.census.req">政府への要望・意見</label>
+                        <textarea placeholder="（例）杖の配給を増やしてほしい、等" rows="3" id="portal-field-8"></textarea>
                     </div>
                 </div>
                 <button type="submit" class="w-full bg-zinc-100 text-black py-4 mt-8 font-bold hover:bg-red-600 hover:text-white transition pixel-font" data-lang-key="modal.census.submit">回答を正式送信</button>
@@ -375,17 +379,18 @@ html_content = """<!DOCTYPE html>
     </div>
 
     <!-- メッセージボックス -->
-    <div id="msgBox" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[200] hidden">
+    <div role="alertdialog" aria-modal="true" aria-labelledby="msgText" id="msgBox" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[200] hidden">
         <div class="bg-zinc-900 border-2 border-white p-8 text-center shadow-[0_0_50px_rgba(0,0,0,1)]">
             <div id="msgIcon" class="text-4xl mb-4">📋</div>
             <p id="msgText" class="text-xl pixel-font mb-6 leading-relaxed"></p>
             <button onclick="hideMsg()" class="bg-white text-black px-10 py-2 font-bold pixel-font hover:bg-zinc-200 transition" data-lang-key="msg.btn">確認</button>
         </div>
     </div>
-  <script src="src/script_0c08256f.js"></script>
+  <script src="src/script_0c08256f.js?v=20261101-portal"></script>
+
 </body>
 </html>
 """
 
-with open("/Users/rituto/Documents/GitHub/Waon-Jinkoku/index.html", "w") as f:
+with open(Path(__file__).with_name("index.html"), "w", encoding="utf-8") as f:
     f.write(html_content)

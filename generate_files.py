@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import json
 import os
 
@@ -5,11 +7,11 @@ ja = """nav.title=和温陣国
 nav.wzn=和温放送局 (WZN)
 nav.contact=謁見の間
 hero.title=和温陣国
-hero.subtitle=State Information Management System
-tab.overview=国家概要
+hero.subtitle=和温陣国 公式ポータル
+tab.overview=暮らし・入国
 tab.culture=文化・歴史
-tab.map=国土地図
-tab.database=データベース
+tab.map=国土・地図
+tab.database=国の紹介・公文書
 
 overview.flag.title=和温陣の旗
 overview.flag.desc=デジタルと伝統、そして「安定」の象徴。
@@ -45,7 +47,7 @@ modal.entry.travel=渡航方法
 modal.entry.travel.op1=海上（定期船）
 modal.entry.travel.op2=陣（空間転移）
 modal.entry.check=私は和温陣国の法を遵守し、「安定」を乱さないことを誓います。
-modal.entry.submit=申請データを送信
+modal.entry.submit=申請を体験する
 
 modal.census.title=第1回 和温陣国 国勢調査
 modal.census.sub=National Population Census
@@ -66,11 +68,11 @@ modal.census.stab.l=不安定
 modal.census.stab.m=中立
 modal.census.stab.r=完全安定
 modal.census.req=政府への要望・意見
-modal.census.submit=回答を正式送信
+modal.census.submit=回答を体験する
 
 msg.btn=確認
 
-db.setting.title=和温陣国 基本設定
+db.setting.title=和温陣国の基本情報
 db.setting.lang_off=公用語：シェルアップ語
 db.setting.capital=首都：和陣当府
 db.setting.continent=大陸：ラ＝ウクカ大陸
@@ -104,7 +106,7 @@ db.qa.a7=A. 別に話しても良いですが、onvaのことを聞くのは禁�
 db.glossary.title=用語：ザラヴァサ（zaravasa）
 db.glossary.desc=※1 onvaに住んでる人でザラヴァサ（zaravasa）した人が稀に移住している<br><br>**ザラヴァサ（zaravasa） [形]**<br>シェルアップ語が元。最適化されすぎて精神的・肉体的に疲弊した状態。主にonvaから来た移住者が使う表現。
 
-db.chars.title=登録人物・機密データ
+db.chars.title=関係者・公開情報
 db.char1.name=カイ・レノス
 db.char1.desc=職業: 外交官 / 言語: シェルアップ語, シェランヤブ語, 日本語 / 種族: 人間
 db.char2.name=T.S (仮国籍)
@@ -133,17 +135,65 @@ db.history.1=🌒 黎明と調律の代償<br>東歴850年、「記号」のエ�
 db.history.2=📘 タナトの旅と『‽（インテロバング）』の奇跡<br>時を経て、「らくがき」のような未完成の杖を持つ少年タナトが立ち上がる。彼は世界の基本属性や異国の技術を学び、自らの杖を「テクトニクス」へと進化させた。 4次元の脅威「神の杖」が現れた際、タナトは禁忌である「核・ウイルス」と「？」を解放してこれを撃破。直後に生じた世界の崩壊に対し、職人たちが放った「確定ノ御杖（！）」の光と「？」を合体させ、疑問と確定が共存する「‽（インテロバング）」の杖を創り上げた。<br>全てを「無」に帰そうとした魔王も、タナトの杖の中に自分の苦しみが「世界を構成する不可欠な部品」として調律されているのを見て、自ら「‽」の終止符（ピリオド）へと溶け込み、世界の礎となった。
 db.history.3=⚔️ 新たなリーダーと『杖を持たぬ民族』<br>それから5年、大往生を遂げたタナトの跡を継ぎ、青年中下が国のリーダーとなる。 平和な国を揺るがしたのは、島に遭難してきた「杖を使わない民族」との遭遇だった。好戦的な彼らのリーダーに決闘を挑まれた中下は、緑色の杖で風を操り、圧倒的な実力差で相手の巨剣を弾き飛ばす。<br>しかし、勝敗のあとに残ったのは深い問いだった。 「杖は正しすぎる。だから俺たちは、あえて不安定を選んだ」 彼らは無知ゆえに杖を持たないのではなく、和温陣国が選ばなかった「もう一つの解答」として、あえて不確定な未来を生きていたのだ。
 db.history.4=🌅 没案庫の余白<br>中下はその出会いを公式記録から抹消し、調律師だけの「没案庫」にそっと書き残した。<br><br>没案記録 No.！？-β「杖を持たないという選択」<br>安定は正義ではない。だが不安定もまた、悪ではない。 世界は“確定された問い”だけでは、前に進めない。<br><br>魔王の熱を内包した「‽」の調律、そして杖を持たぬ者たちの意志。 全てを包み込んだ和温陣国の空で、鮮やかな国旗は、今日も新しく、静かに揺れている。
+
+
+# Official portal
+page.title=和温陣国 公式サイト
+portal.skip=本文へ移動
+portal.official=和温陣国 公式ポータル
+portal.motto=均衡と調和、秩序ある混沌
+portal.language=表示言語
+portal.home=ホーム
+portal.hero.label=和温陣国公式サイト
+portal.hero.title=調和をつなぎ、<br>ともに暮らす。
+portal.hero.desc=ラ＝ウクカ大陸に息づく、杖と陣の国。暮らしの案内から、渡航、文化、国のしくみまで。和温陣国の情報をお届けします。
+portal.hero.action=入国・滞在のご案内
+portal.flag.alt=空にはためく和温陣国の国旗
+portal.flag.caption=和温陣国の国旗 — デジタルと伝統、安定の象徴
+portal.safety.label=渡航・安全情報
+portal.safety.desc=首都以外の地域では空間の歪みに注意が必要です。移動前に、渡航案内と地域の情報をご確認ください。
+portal.safety.link=安全上の注意 →
+portal.services.title=目的から探す
+portal.services.desc=必要な情報へ、ここから。
+portal.visit.title=入国・滞在
+portal.visit.desc=入国審査と渡航方法のご案内。
+portal.residents.title=国民の皆さまへ
+portal.residents.desc=国勢調査と暮らしに関する情報。
+portal.discover.title=和温陣国を知る
+portal.discover.desc=杖の文化と、この国が歩んだ歴史。
+portal.info.title=ご案内・関連機関
+portal.info.news=報道
+portal.info.wzn=和温放送局 — ニュース・国内の情勢
+portal.info.land=国土
+portal.info.map=ラ＝ウクカ大陸の地図を見る
+portal.info.records=公文書
+portal.info.docs=国の基本情報・公開資料を読む
+portal.info.culture=歴史
+portal.info.history=和温陣国の歴史書を読む（TXT）
+portal.country.title=和温陣国について
+portal.country.desc=杖を介して陣を展開し、人々の暮らしと国の安定を支える国です。
+portal.capital=首都
+portal.capital.value=和陣当府
+portal.continent=大陸
+portal.continent.value=ラ＝ウクカ大陸
+portal.country.link=国のしくみ・基本情報 →
+portal.overview.desc=渡航の準備、入国審査、国民向けのご案内。
+portal.fiction=このサイトは東暦世界の架空国家「和温陣国」の公式サイトです。
+portal.close=閉じる
+portal.form.note=体験用フォームです。入力内容は送信・保存されません。
+portal.entry.result={name}さん、入国申請の体験が完了しました。入力内容は送信・保存されていません。
+portal.census.result=国勢調査の体験が完了しました。入力内容は送信・保存されていません。
 """
 
 en = """nav.title=Waon-Jinkoku
 nav.wzn=WZN Broadcast
 nav.contact=Audience Chamber
 hero.title=Waon-Jinkoku
-hero.subtitle=State Information Management System
-tab.overview=Overview
-tab.culture=Culture & History
-tab.map=National Map
-tab.database=Database
+hero.subtitle=Official portal of Waon Jinkoku
+tab.overview=Living & visiting
+tab.culture=Culture & history
+tab.map=Land & maps
+tab.database=Government & records
 
 overview.flag.title=Flag of Waon-Jin
 overview.flag.desc=A symbol of digital, tradition, and "stability".
@@ -179,7 +229,7 @@ modal.entry.travel=Mode of Travel
 modal.entry.travel.op1=Sea (Scheduled Ship)
 modal.entry.travel.op2=Formation (Spatial Transfer)
 modal.entry.check=I swear to abide by the laws of Waon-Jinkoku and not disturb its "stability".
-modal.entry.submit=Submit Application Data
+modal.entry.submit=Try the application
 
 modal.census.title=1st Waon-Jinkoku National Census
 modal.census.sub=National Population Census
@@ -200,11 +250,11 @@ modal.census.stab.l=Unstable
 modal.census.stab.m=Neutral
 modal.census.stab.r=Fully Stable
 modal.census.req=Requests/Opinions to the Government
-modal.census.submit=Officially Submit Answers
+modal.census.submit=Try the census
 
 msg.btn=Confirm
 
-db.setting.title=Waon-Jinkoku Basic Settings
+db.setting.title=National information
 db.setting.lang_off=Official Language: Shell-up
 db.setting.capital=Capital: Wajin-Tofu
 db.setting.continent=Continent: La-Ukuka
@@ -238,7 +288,7 @@ db.qa.a7=A. You can talk to them, but asking about onva is prohibited.<br>Reason
 db.glossary.title=Glossary: Zaravasa
 db.glossary.desc=*1 Rarely, people living in onva who have become zaravasa immigrate here.<br><br>**Zaravasa [Adj]**<br>Derived from Shell-up. A state of mental and physical exhaustion from being too optimized. Mainly used by immigrants from onva.
 
-db.chars.title=Registered Personnel / Classified Data
+db.chars.title=People & public information
 db.char1.name=Kai Renos
 db.char1.desc=Profession: Diplomat / Languages: Shell-up, Sheran-yabu, Japanese / Race: Human
 db.char2.name=T.S (Provisional Nationality)
@@ -267,17 +317,65 @@ db.history.1=🌒 Dawn and the Price of Tuning<br>In East Era 850, Waon-Jinkoku 
 db.history.2=📘 Tanato's Journey and the Miracle of "‽"<br>Time passed, and a boy named Tanato with an incomplete "doodle"-like staff arose. He learned the world's basic attributes and foreign technologies, evolving his staff into "Tectonics". When the 4D threat "Staff of God" appeared, Tanato released the taboos "Nuclear/Virus" and "?" to defeat it. In response to the subsequent world collapse, he merged the craftsmen's "Staff of Confirmation (!)" with "?", creating the staff of "‽" (Interrobang) where question and certainty coexist.<br>The Demon Lord, seeing his suffering tuned as an "indispensable part of the world" inside Tanato's staff, melted into the period of "‽", becoming the foundation of the world.
 db.history.3=⚔️ A New Leader and the "Tribe Without Staffs"<br>Five years later, Tanato passed away, and the young man Nakashita became the leader. The peaceful country was shaken by an encounter with a shipwrecked "Tribe that does not use staffs." Challenged to a duel by their warlike leader, Nakashita manipulated the wind with a green staff, blowing away the giant sword with an overwhelming difference in power.<br>However, what remained was a deep question. "Staffs are too right. That's why we dared to choose instability." They did not lack staffs out of ignorance; they chose an uncertain future as "another answer" that Waon-Jinkoku did not choose.
 db.history.4=🌅 The Blank Space in the Rejected Drafts Archive<br>Nakashita erased this encounter from official records, secretly writing it in the tuners' "Rejected Drafts Archive."<br><br>Rejected Draft No. !?-β "The Choice Not to Have a Staff"<br>Stability is not justice. But instability is not evil either. The world cannot move forward with only "confirmed questions".<br><br>The tuning of "‽" containing the Demon Lord's heat, and the will of those without staffs. Wrapped in all this, the vivid flag sways quietly and anew in the Waon-Jinkoku sky today.
+
+
+# Official portal
+page.title=Waon Jinkoku | Official Portal
+portal.skip=Skip to content
+portal.official=Official portal of Waon Jinkoku
+portal.motto=Balance, harmony and ordered chaos
+portal.language=Language
+portal.home=Home
+portal.hero.label=WELCOME TO WAON JINKOKU
+portal.hero.title=A shared life.<br>A lasting harmony.
+portal.hero.desc=A nation of staffs and magic circles on the La-Ukuka continent. Find information on daily life, visiting, culture and the nation.
+portal.hero.action=Plan your visit
+portal.flag.alt=The national flag of Waon Jinkoku flying in the sky
+portal.flag.caption=Our national flag — a symbol of tradition, the digital world and stability
+portal.safety.label=Travel & safety
+portal.safety.desc=Spatial distortions can occur outside the capital. Read the travel guidance and regional information before travelling.
+portal.safety.link=Read safety guidance →
+portal.services.title=How can we help?
+portal.services.desc=Your starting point for national information.
+portal.visit.title=Visiting Waon Jinkoku
+portal.visit.desc=Entry guidance and ways to travel.
+portal.residents.title=For residents
+portal.residents.desc=The census and information for daily life.
+portal.discover.title=Discover our nation
+portal.discover.desc=Explore staff culture and our history.
+portal.info.title=Information & related organisations
+portal.info.news=News
+portal.info.wzn=WZN — national news and coverage
+portal.info.land=Land
+portal.info.map=Explore the map of La-Ukuka
+portal.info.records=Records
+portal.info.docs=Read national information and public records
+portal.info.culture=History
+portal.info.history=Read the national history (TXT, Japanese)
+portal.country.title=About Waon Jinkoku
+portal.country.desc=Staffs and magic circles sustain daily life and the stability of our nation.
+portal.capital=Capital
+portal.capital.value=Wajin-Tofu
+portal.continent=Continent
+portal.continent.value=La-Ukuka
+portal.country.link=Explore national information →
+portal.overview.desc=Prepare for your visit, explore entry guidance and find resident information.
+portal.fiction=The official website of Waon Jinkoku, a fictional nation in the East Calendar world.
+portal.close=Close
+portal.form.note=Demonstration form. Your information is not sent or saved.
+portal.entry.result={name}, your entry application demonstration is complete. Your information was not sent or saved.
+portal.census.result=Your census demonstration is complete. Your information was not sent or saved.
 """
 
 eo = """nav.title=Waon-Jinkoku
 nav.wzn=WZN-Dissendo
 nav.contact=Aŭdienca Ĉambro
 hero.title=Waon-Jinkoku
-hero.subtitle=Ŝtata Informa Administra Sistemo
-tab.overview=Superrigardo
-tab.culture=Kulturo & Historio
-tab.map=Nacia Mapo
-tab.database=Datumbazo
+hero.subtitle=Oficiala portalo de Waon Jinkoku
+tab.overview=Loĝado kaj eniro
+tab.culture=Kulturo kaj historio
+tab.map=Lando kaj mapoj
+tab.database=Ŝtato kaj dokumentoj
 
 overview.flag.title=Flago de Waon-Jin
 overview.flag.desc=Simbolo de cifereca, tradicio, kaj "stabileco".
@@ -313,7 +411,7 @@ modal.entry.travel=Vojaĝmaniero
 modal.entry.travel.op1=Maro (Planita Ŝipo)
 modal.entry.travel.op2=Formacio (Spaca Translokigo)
 modal.entry.check=Mi ĵuras obei la leĝojn de Waon-Jinkoku kaj ne ĝeni ĝian "stabilecon".
-modal.entry.submit=Afiŝi Aplikajn Datumojn
+modal.entry.submit=Provi la peton
 
 modal.census.title=1-a Nacia Censo de Waon-Jinkoku
 modal.census.sub=Nacia Loĝantara Censo
@@ -334,11 +432,11 @@ modal.census.stab.l=Malstabila
 modal.census.stab.m=Neŭtrala
 modal.census.stab.r=Plene Stabila
 modal.census.req=Petoj/Opinioj al la Registaro
-modal.census.submit=Oficiale Sendi Respondojn
+modal.census.submit=Provi la popolnombradon
 
 msg.btn=Konfirmi
 
-db.setting.title=Bazaj Agordoj de Waon-Jinkoku
+db.setting.title=Landaj informoj
 db.setting.lang_off=Oficiala Lingvo: Ŝel-up
 db.setting.capital=Ĉefurbo: Wajin-Tofu
 db.setting.continent=Kontinento: La-Ukuka
@@ -372,7 +470,7 @@ db.qa.a7=A. Vi povas paroli kun ili, sed demandi pri onva estas malpermesita.<br
 db.glossary.title=Glosaro: Zaravasa
 db.glossary.desc=*1 Malofte, homoj vivantaj en onva, kiuj fariĝis zaravasa, enmigras ĉi tien.<br><br>**Zaravasa [Adj]**<br>Derivita de Ŝel-up. Stato de mensa kaj fizika elĉerpiĝo pro troa optimumigo. Ĉefe uzata de enmigrintoj de onva.
 
-db.chars.title=Registrita Personaro / Klasigita Datumo
+db.chars.title=Personoj kaj publikaj informoj
 db.char1.name=Kai Renos
 db.char1.desc=Profesio: Diplomato / Lingvoj: Ŝel-up, Ŝeran-yabu, Japana / Raso: Homo
 db.char2.name=T.S (Provizora Nacieco)
@@ -401,11 +499,59 @@ db.history.1=🌒 Tagiĝo kaj la Prezo de Agordado<br>En Orienta Epoko 850, Waon
 db.history.2=📘 La Vojaĝo de Tanato kaj la Miraklo de "‽"<br>Tempo pasis, kaj knabo nomita Tanato kun nekompleta "skribaĉa"-simila bastono ekstaris. Li lernis la bazajn atributojn de la mondo kaj eksterlandajn teknologiojn, evoluigante sian bastonon en "Tectonics". Kiam la 4D minaco "Bastono de Dio" aperis, Tanato liberigis la tabuojn "Nuklea/Viruso" kaj "?" por venki ĝin. Responde al la posta monda kolapso, li kunfandis la "Bastonon de Konfirmo (!)" de la metiistoj kun "?", kreante la bastonon de "‽" (Interrobang) kie demando kaj certeco kunekzistas.<br>La Demona Sinjoro, vidante sian suferon agorditan kiel "necesa parto de la mondo" ene de la bastono de Tanato, fandiĝis en la punkton de "‽", iĝante la fundamento de la mondo.
 db.history.3=⚔️ Nova Gvidanto kaj la "Tribo Sen Bastonoj"<br>Kvin jarojn poste, Tanato mortis, kaj la juna viro Nakashita fariĝis la gvidanto. La paca lando estis skuita per renkonto kun ŝippereinta "Tribo, kiu ne uzas bastonojn." Defiita al duelo fare de ilia militema gvidanto, Nakashita manipulis la venton per verda bastono, forblovante la gigantan glavon per superforta diferenco en potenco.<br>Tamen, kio restis estis profunda demando. "Bastonoj estas tro pravaj. Tial ni kuraĝis elekti malstabilecon." Al ili ne mankis bastonoj pro nescio; ili elektis necertan estontecon kiel "alian respondon", kiun Waon-Jinkoku ne elektis.
 db.history.4=🌅 La Blanka Spaco en la Arkivo de Malakceptitaj Skizoj<br>Nakashita forigis ĉi tiun renkonton el oficialaj registroj, sekrete skribante ĝin en la "Arkivo de Malakceptitaj Skizoj" de la agordantoj.<br><br>Malakceptita Skizo N-ro !?-β "La Elekto Ne Havi Bastonon"<br>Stabileco ne estas justeco. Sed malstabileco ankaŭ ne estas malbono. La mondo ne povas antaŭeniri nur kun "konfirmitaj demandoj".<br><br>La agordado de "‽" enhavanta la varmon de la Demona Sinjoro, kaj la volo de tiuj sen bastonoj. Envolvita en ĉio ĉi, la vigla flago svingiĝas trankvile kaj denove en la ĉielo de Waon-Jinkoku hodiaŭ.
+
+
+# Official portal
+page.title=Waon Jinkoku | Oficiala Portalo
+portal.skip=Iri al enhavo
+portal.official=Oficiala portalo de Waon Jinkoku
+portal.motto=Ekvilibro, harmonio kaj orda kaoso
+portal.language=Lingvo
+portal.home=Hejmo
+portal.hero.label=BONVENON AL WAON JINKOKU
+portal.hero.title=Vivi kune.<br>Daŭrigi harmonion.
+portal.hero.desc=Lando de bastonoj kaj magiaj cirkloj sur la kontinento La-Ukuka. Trovu informojn pri ĉiutaga vivo, vizitado, kulturo kaj la ŝtato.
+portal.hero.action=Plani vian viziton
+portal.flag.alt=La nacia flago de Waon Jinkoku flirtanta en la ĉielo
+portal.flag.caption=Nia nacia flago — simbolo de tradicio, la cifereca mondo kaj stabileco
+portal.safety.label=Vojaĝado kaj sekureco
+portal.safety.desc=Ekster la ĉefurbo povas okazi spacaj distordoj. Legu la vojaĝajn gvidojn kaj regionajn informojn antaŭ ol vojaĝi.
+portal.safety.link=Legi sekurecajn konsilojn →
+portal.services.title=Kion vi serĉas?
+portal.services.desc=Via deirpunkto por landaj informoj.
+portal.visit.title=Viziti Waon Jinkoku
+portal.visit.desc=Eniraj gvidoj kaj vojaĝmanieroj.
+portal.residents.title=Por loĝantoj
+portal.residents.desc=La popolnombrado kaj informoj pri ĉiutaga vivo.
+portal.discover.title=Malkovri nian landon
+portal.discover.desc=Esploru la bastonan kulturon kaj nian historion.
+portal.info.title=Informoj kaj rilataj organizaĵoj
+portal.info.news=Novaĵoj
+portal.info.wzn=WZN — naciaj novaĵoj kaj raportoj
+portal.info.land=Lando
+portal.info.map=Esplori la mapon de La-Ukuka
+portal.info.records=Dokumentoj
+portal.info.docs=Legi landajn informojn kaj publikajn dokumentojn
+portal.info.culture=Historio
+portal.info.history=Legi la nacian historion (TXT, japane)
+portal.country.title=Pri Waon Jinkoku
+portal.country.desc=Bastonoj kaj magiaj cirkloj subtenas la ĉiutagan vivon kaj la stabilecon de nia lando.
+portal.capital=Ĉefurbo
+portal.capital.value=Wajin-Tofu
+portal.continent=Kontinento
+portal.continent.value=La-Ukuka
+portal.country.link=Esplori landajn informojn →
+portal.overview.desc=Preparu vian viziton, esploru enirajn gvidojn kaj trovu informojn por loĝantoj.
+portal.fiction=La oficiala retejo de Waon Jinkoku, fikcia ŝtato en la mondo de la Orienta Kalendaro.
+portal.close=Fermi
+portal.form.note=Demonstra formularo. Viaj informoj ne estas sendataj aŭ konservataj.
+portal.entry.result={name}, via demonstra enirpeto estas finita. Viaj informoj ne estis senditaj aŭ konservitaj.
+portal.census.result=Via demonstra popolnombrado estas finita. Viaj informoj ne estis senditaj aŭ konservitaj.
 """
 
-with open("/Users/rituto/Documents/GitHub/Waon-Jinkoku/ja.lang", "w") as f:
+with open(Path(__file__).with_name("ja.lang"), "w", encoding="utf-8") as f:
     f.write(ja)
-with open("/Users/rituto/Documents/GitHub/Waon-Jinkoku/en.lang", "w") as f:
+with open(Path(__file__).with_name("en.lang"), "w", encoding="utf-8") as f:
     f.write(en)
-with open("/Users/rituto/Documents/GitHub/Waon-Jinkoku/eo.lang", "w") as f:
+with open(Path(__file__).with_name("eo.lang"), "w", encoding="utf-8") as f:
     f.write(eo)
