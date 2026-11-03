@@ -83,7 +83,7 @@ async function setPortalLanguage(language, remember = true) {
     const request = ++languageRequest;
     if (!supportedLanguages.includes(language)) language = 'ja';
     try {
-        const response = await fetch(`${language}.lang?v=20261101-shellvail1`);
+        const response = await fetch(`${language}.lang?v=20261103-people1`);
         if (!response.ok) throw new Error('Language unavailable');
         const data = parseLanguage(await response.text());
         if (request !== languageRequest) return;
@@ -107,3 +107,4 @@ const browserLanguage = (navigator.languages || [navigator.language]).map(code =
 setPortalLanguage(supportedLanguages.includes(preferred) ? preferred : browserLanguage || 'ja', false);
 document.getElementById('portal-language').addEventListener('change', event => setPortalLanguage(event.target.value));
 switchTab(location.hash.slice(1) || 'tab-home');
+

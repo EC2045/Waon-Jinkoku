@@ -1,0 +1,17 @@
+{
+  "monsanpas": {
+    "name": "モンサンパス家",
+    "country": "和温陣国",
+    "children": [
+      {
+        "name": "結菜",
+        "relationship_to_rijes": "知り合い"
+      },
+      {
+        "name": "莉奈",
+        "relationship_to_rijes": "知り合い"
+      }
+    ],
+    "notes": "親の個人名・年齢・出生順・結菜と莉奈の役職は未設定。"
+  }
+}
