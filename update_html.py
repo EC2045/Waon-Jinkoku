@@ -35,7 +35,7 @@ html_content = """<!DOCTYPE html>
         <div id="tab-home" class="tab-content active">
             <section class="national-hero" aria-labelledby="welcome-title">
                 <div class="hero-copy"><p class="eyebrow" data-lang-key="portal.hero.label">和温陣国公式サイト</p><h1 id="welcome-title" data-lang-key="portal.hero.title">調和をつなぎ、<br>ともに暮らす。</h1><p data-lang-key="portal.hero.desc">ラ＝ウクカ大陸に息づく、杖と陣の国。暮らしの案内から、渡航、文化、国のしくみまで。和温陣国の情報をお届けします。</p><a class="primary-link" href="#tab-overview"><span data-lang-key="portal.hero.action">入国・滞在のご案内</span><span aria-hidden="true"> →</span></a></div>
-                <figure><img src="旗.png" data-lang-alt="portal.flag.alt" alt="空にはためく和温陣国の国旗"><figcaption data-lang-key="portal.flag.caption">和温陣国の国旗 — デジタルと伝統、安定の象徴</figcaption></figure>
+                <figure><img src="旗.webp" data-lang-alt="portal.flag.alt" alt="空にはためく和温陣国の国旗"><figcaption data-lang-key="portal.flag.caption">和温陣国の国旗 — デジタルと伝統、安定の象徴</figcaption></figure>
             </section>
             <aside class="travel-advisory"><span class="advisory-label" data-lang-key="portal.safety.label">渡航・安全情報</span><p data-lang-key="portal.safety.desc">首都以外の地域では空間の歪みに注意が必要です。移動前に、渡航案内と地域の情報をご確認ください。</p><a href="#tab-database" data-lang-key="portal.safety.link">安全上の注意 →</a></aside>
             <section class="portal-section" aria-labelledby="services-title"><div class="section-heading"><div><p class="eyebrow">SERVICES & INFORMATION</p><h2 id="services-title" data-lang-key="portal.services.title">目的から探す</h2></div><p data-lang-key="portal.services.desc">必要な情報へ、ここから。</p></div>
@@ -65,7 +65,7 @@ html_content = """<!DOCTYPE html>
                         <h2 class="text-3xl font-bold mb-4 pixel-font italic" data-lang-key="overview.flag.title">和温陣の旗</h2>
                         <p class="text-gray-400 leading-relaxed" data-lang-key="overview.flag.desc">デジタルと伝統、そして「安定」の象徴。</p>
                     </div>
-                    <img src="旗.png" alt="国旗" class="w-full border border-white/10 shadow-2xl">
+                    <img src="旗.webp" alt="国旗" class="w-full border border-white/10 shadow-2xl">
                 </div>
                 <div class="space-y-6">
                     <!-- 入国管理システムカード -->
